@@ -1,0 +1,307 @@
+<Project name="CppCompiler">
+	<Settings>
+		<Standard>c++11</Standard>
+		<Subsystem>console</Subsystem>
+		<Warnings>all</Warnings>
+		<WarningsAsErrors>True</WarningsAsErrors>
+		<OptimizationLevel>4</OptimizationLevel>
+		<DebugInfo>False</DebugInfo>
+		<Multithreaded>True</Multithreaded>
+		<OutputFolder>output</OutputFolder>
+		<OutputFileName>{ProjectName}.exe</OutputFileName>
+		<IncludeDirectories/>
+		<Libraries>
+			<Library>ws2_32</Library>
+		</Libraries>
+	</Settings>
+	<Files>
+		<Folder name="IO">
+			<Folder name="Position">
+				<File>Position.h</File>
+				<File>Position.cpp</File>
+			</Folder>
+			<Folder name="Char">
+				<File>Char.h</File>
+				<File>Char.cpp</File>
+			</Folder>
+			<Folder name="CharStream">
+				<File>CharStream.h</File>
+				<File>CharStream.cpp</File>
+			</Folder>
+			<Folder name="BinaryReader">
+				<File>BinaryReader.h</File>
+				<File>BinaryReader.cpp</File>
+			</Folder>
+			<Folder name="BinaryWriter">
+				<File>BinaryWriter.h</File>
+				<File>BinaryWriter.cpp</File>
+			</Folder>
+		</Folder>
+		<Folder name="PreProcessor">
+			<Folder name="PreProcessorTokenType">
+				<File>PreProcessorTokenType.h</File>
+				<File>PreProcessorTokenType.cpp</File>
+			</Folder>
+			<Folder name="PreProcessorLine">
+				<File>PreProcessorLine.h</File>
+				<File>PreProcessorLine.cpp</File>
+			</Folder>
+			<Folder name="PreProcessorTokenStream">
+				<File>PreProcessorTokenStream.h</File>
+				<File>PreProcessorTokenStream.cpp</File>
+			</Folder>
+			<Folder name="PreProcessorToken">
+				<File>PreProcessorToken.h</File>
+				<File>PreProcessorToken.cpp</File>
+			</Folder>
+			<Folder name="PreProcessorBlock">
+				<File>PreProcessorBlock.h</File>
+				<File>PreProcessorBlock.cpp</File>
+			</Folder>
+			<Folder name="PreProcessorBlockEvaluator">
+				<File>PreProcessorBlockEvaluator.h</File>
+				<File>PreProcessorBlockEvaluator.cpp</File>
+			</Folder>
+			<Folder name="PreProcessorTokenBlock">
+				<File>PreProcessorTokenBlock.h</File>
+				<File>PreProcessorTokenBlock.cpp</File>
+			</Folder>
+			<Folder name="PreProcessorDirectiveType">
+				<File>PreProcessorDirectiveType.h</File>
+				<File>PreProcessorDirectiveType.cpp</File>
+			</Folder>
+			<Folder name="PreProcessorDirectiveBlock">
+				<File>PreProcessorDirectiveBlock.h</File>
+				<File>PreProcessorDirectiveBlock.cpp</File>
+			</Folder>
+			<Folder name="PreProcessorConditionType">
+				<File>PreProcessorConditionType.h</File>
+				<File>PreProcessorConditionType.cpp</File>
+			</Folder>
+			<Folder name="PreProcessorCondition">
+				<File>PreProcessorCondition.h</File>
+				<File>PreProcessorCondition.cpp</File>
+			</Folder>
+			<Folder name="PreProcessorConditionBlock">
+				<File>PreProcessorConditionBlock.h</File>
+				<File>PreProcessorConditionBlock.cpp</File>
+			</Folder>
+			<Folder name="PreProcessor">
+				<File>PreProcessor.h</File>
+				<File>PreProcessor.cpp</File>
+			</Folder>
+			<Folder name="Macro">
+				<File>Macro.h</File>
+				<File>Macro.cpp</File>
+			</Folder>
+			<Folder name="MacroType">
+				<File>MacroType.h</File>
+				<File>MacroType.cpp</File>
+			</Folder>
+			<Folder name="MacroTable">
+				<File>MacroTable.h</File>
+				<File>MacroTable.cpp</File>
+				<File>MacroTableExpander.h</File>
+			</Folder>
+			<Folder name="MacroExpander">
+				<File>MacroExpander.h</File>
+				<File>MacroExpander.cpp</File>
+			</Folder>
+			<Folder name="PreProcessorExpression">
+				<File>PreProcessorExpression.h</File>
+				<File>PreProcessorExpression.cpp</File>
+			</Folder>
+			<Folder name="PreProcessorExpressionNode">
+				<File>PreProcessorExpressionNode.h</File>
+				<File>PreProcessorExpressionNode.cpp</File>
+			</Folder>
+			<Folder name="PreProcessorExpressionOperatorType">
+				<File>PreProcessorExpressionOperatorType.h</File>
+			</Folder>
+			<Folder name="PreProcessorExpressionOperator">
+				<File>PreProcessorExpressionOperator.h</File>
+				<File>PreProcessorExpressionOperator.cpp</File>
+			</Folder>
+			<Folder name="PreProcessorExpressionNumber">
+				<File>PreProcessorExpressionNumber.h</File>
+				<File>PreProcessorExpressionNumber.cpp</File>
+			</Folder>
+			<Folder name="PreProcessorExpressionUnary">
+				<File>PreProcessorExpressionUnary.h</File>
+				<File>PreProcessorExpressionUnary.cpp</File>
+			</Folder>
+			<Folder name="PreProcessorExpressionBinary">
+				<File>PreProcessorExpressionBinary.h</File>
+				<File>PreProcessorExpressionBinary.cpp</File>
+			</Folder>
+		</Folder>
+		<Folder name="Tokens">
+			<Folder name="TokenType">
+				<File>TokenType.h</File>
+				<File>TokenType.cpp</File>
+			</Folder>
+			<Folder name="Token">
+				<File>Token.h</File>
+				<File>Token.cpp</File>
+			</Folder>
+			<Folder name="TokenStream">
+				<File>TokenStream.h</File>
+				<File>TokenStream.cpp</File>
+			</Folder>
+			<Folder name="SentenceItem">
+				<File>SentenceItem.h</File>
+			</Folder>
+			<Folder name="SentenceToken">
+				<File>SentenceToken.h</File>
+				<File>SentenceToken.cpp</File>
+			</Folder>
+			<Folder name="Sentence">
+				<File>Sentence.h</File>
+				<File>Sentence.cpp</File>
+			</Folder>
+		</Folder>
+		<Folder name="Language">
+			<Folder name="GrammarActionType">
+				<File>GrammarActionType.h</File>
+				<File>GrammarActionType.cpp</File>
+			</Folder>
+			<Folder name="GrammarAction">
+				<File>GrammarAction.h</File>
+				<File>GrammarAction.cpp</File>
+			</Folder>
+			<Folder name="TerminalIdentifierType">
+				<File>TerminalIdentifierType.h</File>
+				<File>TerminalIdentifierType.cpp</File>
+			</Folder>
+			<Folder name="Terminal">
+				<File>Terminal.h</File>
+				<File>Terminal.cpp</File>
+			</Folder>
+			<Folder name="SymbolTable">
+				<File>SymbolTable.h</File>
+				<File>SymbolTable.cpp</File>
+			</Folder>
+			<Folder name="ProductionItem">
+				<File>ProductionItem.h</File>
+				<File>ProductionItem.cpp</File>
+			</Folder>
+			<Folder name="Production">
+				<File>Production.h</File>
+				<File>Production.cpp</File>
+			</Folder>
+			<Folder name="NonTerminal">
+				<File>NonTerminal.h</File>
+				<File>NonTerminal.cpp</File>
+			</Folder>
+			<Folder name="Grammar">
+				<File>Grammar.h</File>
+				<File>Grammar.cpp</File>
+			</Folder>
+			<Folder name="GrammarParser">
+				<File>GrammarParser.h</File>
+				<File>GrammarParser.cpp</File>
+			</Folder>
+			<Folder name="Symbol">
+				<File>Symbol.h</File>
+				<File>Symbol.cpp</File>
+			</Folder>
+			<Folder name="Scope">
+				<File>Scope.h</File>
+				<File>Scope.cpp</File>
+			</Folder>
+			<Folder name="SymbolLink">
+				<File>SymbolLink.h</File>
+				<File>SymbolLink.cpp</File>
+			</Folder>
+		</Folder>
+		<Folder name="Parse">
+			<Folder name="ConflictResolution">
+				<File>ConflictResolution.h</File>
+				<File>ConflictResolution.cpp</File>
+			</Folder>
+			<Folder name="TransitionType">
+				<File>TransitionType.h</File>
+				<File>TransitionType.cpp</File>
+			</Folder>
+			<Folder name="TransitionAction">
+				<File>TransitionAction.h</File>
+				<File>TransitionAction.cpp</File>
+			</Folder>
+			<Folder name="TransitionList">
+				<File>TransitionList.h</File>
+				<File>TransitionList.cpp</File>
+			</Folder>
+			<Folder name="ConflictResolver">
+				<File>ConflictResolver.h</File>
+				<File>ConflictResolver.cpp</File>
+			</Folder>
+			<Folder name="TransitionTable">
+				<File>TransitionTable.h</File>
+				<File>TransitionTable.cpp</File>
+			</Folder>
+			<Folder name="Item1">
+				<File>Item1.h</File>
+				<File>Item1.cpp</File>
+			</Folder>
+			<Folder name="ItemXPropogate">
+				<File>ItemXPropogate.h</File>
+				<File>ItemXPropogate.cpp</File>
+			</Folder>
+			<Folder name="ItemX">
+				<File>ItemX.h</File>
+				<File>ItemX.cpp</File>
+			</Folder>
+			<Folder name="ItemSet1">
+				<File>ItemSet1.h</File>
+				<File>ItemSet1.cpp</File>
+			</Folder>
+			<Folder name="ItemSetX">
+				<File>ItemSetX.h</File>
+				<File>ItemSetX.cpp</File>
+			</Folder>
+			<Folder name="SetOfItemSetKernel">
+				<File>SetOfItemSetKernel.h</File>
+				<File>SetOfItemSetKernel.cpp</File>
+			</Folder>
+			<Folder name="ParserLALR">
+				<File>ParserLALR.h</File>
+				<File>ParserLALR.cpp</File>
+			</Folder>
+		</Folder>
+		<Folder name="C++">
+			<Folder name="CharStreamCpp">
+				<File>CharStreamCpp.h</File>
+				<File>CharStreamCpp.cpp</File>
+			</Folder>
+			<Folder name="PreProcessorTokenStreamCpp">
+				<File>PreProcessorTokenStreamCpp.h</File>
+				<File>PreProcessorTokenStreamCpp.cpp</File>
+			</Folder>
+			<Folder name="PreProcessorCppBlockBuilder">
+				<File>PreProcessorCppBlockBuilder.h</File>
+				<File>PreProcessorCppBlockBuilder.cpp</File>
+			</Folder>
+			<Folder name="PreProcessorCpp">
+				<File>PreProcessorCpp.h</File>
+				<File>PreProcessorCpp.cpp</File>
+				<File>PreProcessorCpp.ResolveFileName.cpp</File>
+			</Folder>
+			<Folder name="TokenStreamCpp">
+				<File>TokenStreamCpp.h</File>
+				<File>TokenStreamCpp.cpp</File>
+			</Folder>
+			<Folder name="ConflictResolverCpp">
+				<File>ConflictResolverCpp.h</File>
+				<File>ConflictResolverCpp.cpp</File>
+			</Folder>
+		</Folder>
+		<Folder name="Test Files">
+			<File>example.h</File>
+			<File>example2.h</File>
+			<File>test.h</File>
+			<File>example_grammar.h</File>
+		</Folder>
+		<File>main.cpp</File>
+	</Files>
+</Project>
+

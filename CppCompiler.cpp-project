@@ -150,6 +150,7 @@
 			</Folder>
 			<Folder name="SentenceItem">
 				<File>SentenceItem.h</File>
+				<File>SentenceItem.cpp</File>
 			</Folder>
 			<Folder name="SentenceToken">
 				<File>SentenceToken.h</File>
@@ -295,11 +296,62 @@
 				<File>ConflictResolverCpp.cpp</File>
 			</Folder>
 		</Folder>
+		<Folder name="Diamond">
+			<Folder name="CharStreamDiamond">
+				<File>CharStreamDiamond.h</File>
+				<File>CharStreamDiamond.cpp</File>
+			</Folder>
+			<Folder name="PreProcessorTokenStreamDiamond">
+				<File>PreProcessorTokenStreamDiamond.h</File>
+				<File>PreProcessorTokenStreamDiamond.cpp</File>
+			</Folder>
+			<Folder name="PreProcessorDiamond">
+				<File>PreProcessorDiamond.h</File>
+				<File>PreProcessorDiamond.cpp</File>
+			</Folder>
+			<Folder name="TokenStreamDiamond">
+				<File>TokenStreamDiamond.h</File>
+				<File>TokenStreamDiamond.cpp</File>
+			</Folder>
+			<Folder name="ConflictResolverDiamond">
+				<File>ConflictResolverDiamond.h</File>
+				<File>ConflictResolverDiamond.cpp</File>
+			</Folder>
+			<Folder name="Code Model">
+				<Folder name="CodeNode">
+					<File>CodeNode.h</File>
+					<File>CodeNode.cpp</File>
+				</Folder>
+				<Folder name="CodeNodeFactory">
+					<File>CodeNodeFactory.h</File>
+					<File>CodeNodeFactory.cpp</File>
+				</Folder>
+				<Folder name="CodeTranslationUnit">
+					<File>CodeTranslationUnit.h</File>
+					<File>CodeTranslationUnit.cpp</File>
+				</Folder>
+				<Folder name="CodeTypeNameType">
+					<File>CodeTypeNameType.h</File>
+					<File>CodeTypeNameType.cpp</File>
+				</Folder>
+				<Folder name="CodeTypeName">
+					<File>CodeTypeName.h</File>
+					<File>CodeTypeName.cpp</File>
+				</Folder>
+				<Folder name="CodeDeclaration">
+					<File>CodeDeclaration.h</File>
+					<File>CodeDeclaration.cpp</File>
+				</Folder>
+				<Folder name="CodeDeclarationList">
+					<File>CodeDeclarationList.h</File>
+					<File>CodeDeclarationList.cpp</File>
+				</Folder>
+			</Folder>
+		</Folder>
 		<Folder name="Test Files">
 			<File>example.h</File>
-			<File>example2.h</File>
-			<File>test.h</File>
-			<File>example_grammar.h</File>
+			<File>cpp_grammar.h</File>
+			<File>diamond_grammar.h</File>
 		</Folder>
 		<File>main.cpp</File>
 	</Files>

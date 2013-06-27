@@ -10,6 +10,7 @@ TransitionAction::TransitionAction(const std::string& nonTerminal, const Product
 	: type(TransitionType::Reduce),
 	nonTerminal(nonTerminal),
 	production(production),
+	productionString(production.ToString()),
 	productionItemCount(production.items.size())
 {
 }
@@ -46,6 +47,7 @@ void TransitionAction::Write(BinaryWriter& writer) const
 	writer.Write(static_cast<long>(type));
 	writer.Write(state);
 	writer.Write(nonTerminal);
+	writer.Write(productionString);
 	writer.Write(productionItemCount);
 }
 
@@ -54,6 +56,7 @@ void TransitionAction::Read(BinaryReader& reader)
 	type = static_cast<TransitionType>(reader.ReadInt32());
 	state = reader.ReadSize();
 	nonTerminal = reader.ReadString();
+	productionString = reader.ReadString();
 	productionItemCount = reader.ReadSize();
 }
 

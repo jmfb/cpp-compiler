@@ -3,6 +3,8 @@
 #include <iostream>
 #include "Position.h"
 
+class Sentence;
+
 class SentenceItem
 {
 public:
@@ -14,6 +16,17 @@ public:
 
 	virtual const Position& GetPosition() const = 0;
 	virtual void WriteXml(std::ostream& out) const = 0;
+
+	template <typename T>
+	T& As()
+	{
+		return *dynamic_cast<T*>(this);
+	}
+
+	template <typename T>
+	T& AsCode();
+
+	const std::string& AsToken();
 };
 
 typedef std::shared_ptr<SentenceItem> SentenceItemPtr;

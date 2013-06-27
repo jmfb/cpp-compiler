@@ -2,6 +2,7 @@
 #include <deque>
 #include <string>
 #include "SentenceItem.h"
+#include "CodeNode.h"
 
 class Sentence : public SentenceItem
 {
@@ -22,5 +23,12 @@ public:
 public:
 	std::string name;
 	std::deque<SentenceItemPtr> items;
+	CodeNodePtr codeNode;
 };
+
+template <typename T>
+inline T& SentenceItem::AsCode()
+{
+	return As<Sentence>().codeNode->As<T>();
+}
 

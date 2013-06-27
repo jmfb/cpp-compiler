@@ -24,12 +24,13 @@ public:
 
 	void Write(BinaryWriter& writer) const;
 	void Read(BinaryReader& reader);
-	
+
 public:
 	TransitionType type = TransitionType::Accept;
 	std::size_t state = 0;
 	std::string nonTerminal;
 	Production production;
+	std::string productionString;
 	std::size_t productionItemCount = 0;
 };
 

@@ -44,11 +44,13 @@ void Production::MergeFirst(const std::vector<Terminal>& terminals)
 
 std::string Production::ToString() const
 {
-	std::ostringstream out;
-	for (const auto& item: items)
-		out << item.ToString() << " ";
 	if (items.empty())
-		out << "@";
+		return "@";
+	std::ostringstream out;
+	auto iter = begin(items);
+	out << iter->ToString();
+	for (++iter; iter != end(items); ++iter)
+		out << " " << iter->ToString();
 	return out.str();
 }
 

@@ -1,28 +1,28 @@
 #include "CodeTranslationUnit.h"
 #include "Sentence.h"
+#include "CodeNodeRegister.h"
 
 CodeTranslationUnit::CodeTranslationUnit(const CodeDeclarationList& declarationList)
 	: declarationList(declarationList)
 {
 }
 
-CodeNodeFactory::NonTerminalEntry CodeTranslationUnit::creator
+namespace
 {
-	"translation-unit",
+	CodeNodeRegister translationUnit
 	{
+		"translation-unit",
 		{
-			"<declaration-list>",
-			[](CodeNodeFactory::Items items)
 			{
-				return CodeNodePtr
+				"<declaration-list>",
+				[](CodeNodeItems items)
 				{
-					new CodeTranslationUnit
+					return new CodeTranslationUnit
 					{
 						items[0]->AsCode<CodeDeclarationList>()
-					}
-				};
+					};
+				}
 			}
 		}
-	}
-};
-
+	};
+}

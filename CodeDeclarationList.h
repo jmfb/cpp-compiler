@@ -1,6 +1,5 @@
 #pragma once
 #include "CodeNode.h"
-#include "CodeNodeFactory.h"
 #include "CodeDeclaration.h"
 #include <vector>
 
@@ -12,9 +11,6 @@ public:
 	CodeDeclarationList(
 		const CodeDeclaration& declaration,
 		const CodeDeclarationList& declarationList);
-
-	static CodeNodeFactory::NonTerminalEntry creator;
-	static CodeNodeFactory::NonTerminalEntry optionalCreator;
 
 public:
 	std::vector<CodeDeclaration> declarations;

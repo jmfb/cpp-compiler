@@ -6,8 +6,9 @@
 #include <stdexcept>
 #include "SentenceToken.h"
 #include "Sentence.h"
+#include "CodeNodeFactory.h"
 
-SentenceItemPtr TransitionTable::Parse(TokenStream& tokens, SymbolTable& symtab, CodeNodeFactory& codeNodeFactory, std::ostream* debugDump)
+SentenceItemPtr TransitionTable::Parse(TokenStream& tokens, SymbolTable& symtab, std::ostream* debugDump)
 {
 	std::stack<std::size_t> state;
 	state.push(0);
@@ -41,7 +42,10 @@ SentenceItemPtr TransitionTable::Parse(TokenStream& tokens, SymbolTable& symtab,
 					stack.pop();
 					state.pop();
 				}
-				sentence.codeNode = codeNodeFactory.Create(action.nonTerminal, action.productionString, sentence.items);
+				sentence.codeNode = CodeNodeFactory::Create(
+					action.nonTerminal,
+					action.productionString,
+					sentence.items);
 				stack.push(item);
 				state.push(table[state.top()].GetGoto(action.nonTerminal));
 			}

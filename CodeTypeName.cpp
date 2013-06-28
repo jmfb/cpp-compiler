@@ -1,28 +1,46 @@
 #include "CodeTypeName.h"
+#include "CodeNodeRegister.h"
+#include "Sentence.h"
 
-CodeTypeName::CodeTypeName(CodeTypeNameType type)
-	: type(type)
+CodeTypeName::CodeTypeName(
+	bool isConst,
+	const CodeCoreTypeName& coreTypeName,
+	const CodePointerSpecifier& pointerSpecifier)
+	: isConst(isConst), coreTypeName(coreTypeName), pointerSpecifier(pointerSpecifier)
 {
 }
 
-CodeNodeFactory::NonTerminalEntry CodeTypeName::creator
+namespace
 {
-	"type-name",
+	CodeNodeRegister typeName
 	{
+		"type-name",
 		{
-			"\"var\"",
-			[](CodeNodeFactory::Items)
 			{
-				return CodeNodePtr { new CodeTypeName { CodeTypeNameType::Var } };
-			}
-		},
-		{
-			"\"bool\"",
-			[](CodeNodeFactory::Items)
+				"<core-type-name> <pointer-specifier-opt>",
+				[](CodeNodeItems items)
+				{
+					return new CodeTypeName
+					{
+						false,
+						items[0]->AsCode<CodeCoreTypeName>(),
+						items[1]->AsCode<CodePointerSpecifier>()
+					};
+				}
+			},
 			{
-				return CodeNodePtr { new CodeTypeName { CodeTypeNameType::Bool } };
+				"\"const\" <core-type-name> <pointer-specifier-opt>",
+				[](CodeNodeItems items)
+				{
+					return new CodeTypeName
+					{
+						true,
+						items[1]->AsCode<CodeCoreTypeName>(),
+						items[2]->AsCode<CodePointerSpecifier>()
+					};
+				}
 			}
 		}
-	}
-};
+	};
+}
 

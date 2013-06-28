@@ -30,12 +30,11 @@ int main(int argc, char** argv)
 		SymbolTable symtab;
 
 		std::cout << "Using CodeNodeFactory to generate grammar string." << std::endl;
-		CodeNodeFactory codeNodeFactory;
-		auto grammarString = codeNodeFactory.GenerateGrammar();
+		auto grammarString = CodeNodeFactory::GenerateGrammar();
 		const auto grammarFileName = R"(c:\save\code\CppCompiler\output\_grammar.txt)";
 		std::ofstream outGrammar { grammarFileName };
 		outGrammar << grammarString << std::endl;
-		
+
 		std::cout << "Using LALR parser generator on grammar." << std::endl;
 		auto table = ParserLALR::Generate(grammarString, "translation-unit", resolver);
 
@@ -44,7 +43,7 @@ int main(int argc, char** argv)
 		outTable << table.ToString() << std::endl;
 
 		std::cout << "Using transition table to parse example." << std::endl;
-		auto item = table.Parse(tokens, symtab, codeNodeFactory, &std::cout);
+		auto item = table.Parse(tokens, symtab, &std::cout);
 
 		const auto xmlFileName = R"(c:\save\code\CppCompiler\output\_sentence.xml)";
 		std::ofstream outXml { xmlFileName };
@@ -56,7 +55,16 @@ int main(int argc, char** argv)
 
 		auto& translationUnit = item->AsCode<CodeTranslationUnit>();
 		for (auto& declaration: translationUnit.declarationList.declarations)
+		{
 			std::cout << "Declared: " << declaration.name << std::endl;
+			if (declaration.typeName.coreTypeName.type == CodeCoreType::QualifiedName)
+			{
+				std::cout << "  Type: ";
+				for (auto& name: declaration.typeName.coreTypeName.qualifiedName.names)
+					std::cout << name << " ";
+				std::cout << std::endl;
+			}
+		}
 	}
 	catch (const std::exception& exception)
 	{

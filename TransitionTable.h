@@ -8,7 +8,6 @@
 #include "SentenceItem.h"
 #include "BinaryReader.h"
 #include "BinaryWriter.h"
-#include "CodeNodeFactory.h"
 
 class TransitionTable
 {
@@ -19,7 +18,7 @@ public:
 
 	TransitionTable& operator=(const TransitionTable& rhs) = default;
 
-	SentenceItemPtr Parse(TokenStream& tokens, SymbolTable& symtab, CodeNodeFactory& codeNodeFactory, std::ostream* debugDump);
+	SentenceItemPtr Parse(TokenStream& tokens, SymbolTable& symtab, std::ostream* debugDump);
 
 	void SaveToFile(const std::string& fileName) const;
 	void LoadFromFile(const std::string& fileName);

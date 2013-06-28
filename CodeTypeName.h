@@ -1,16 +1,20 @@
 #pragma once
 #include "CodeNode.h"
-#include "CodeTypeNameType.h"
-#include "CodeNodeFactory.h"
+#include "CodeCoreTypeName.h"
+#include "CodePointerSpecifier.h"
 
 class CodeTypeName : public CodeNode
 {
 public:
-	CodeTypeName(CodeTypeNameType type);
+	CodeTypeName(
+		bool isConst,
+		const CodeCoreTypeName& coreTypeName,
+		const CodePointerSpecifier& pointerSpecifier);
+	~CodeTypeName() noexcept(true) = default;
 
-	static CodeNodeFactory::NonTerminalEntry creator;
-	
 public:
-	CodeTypeNameType type;
+	bool isConst;
+	CodeCoreTypeName coreTypeName;
+	CodePointerSpecifier pointerSpecifier;
 };
 

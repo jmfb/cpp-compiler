@@ -326,17 +326,13 @@
 					<File>CodeNodeFactory.h</File>
 					<File>CodeNodeFactory.cpp</File>
 				</Folder>
+				<Folder name="CodeNodeRegister">
+					<File>CodeNodeRegister.h</File>
+					<File>CodeNodeRegister.cpp</File>
+				</Folder>
 				<Folder name="CodeTranslationUnit">
 					<File>CodeTranslationUnit.h</File>
 					<File>CodeTranslationUnit.cpp</File>
-				</Folder>
-				<Folder name="CodeTypeNameType">
-					<File>CodeTypeNameType.h</File>
-					<File>CodeTypeNameType.cpp</File>
-				</Folder>
-				<Folder name="CodeTypeName">
-					<File>CodeTypeName.h</File>
-					<File>CodeTypeName.cpp</File>
 				</Folder>
 				<Folder name="CodeDeclaration">
 					<File>CodeDeclaration.h</File>
@@ -345,6 +341,44 @@
 				<Folder name="CodeDeclarationList">
 					<File>CodeDeclarationList.h</File>
 					<File>CodeDeclarationList.cpp</File>
+				</Folder>
+				<Folder name="Types">
+					<Folder name="CodeBuiltInType">
+						<File>CodeBuiltInType.h</File>
+						<File>CodeBuiltInType.cpp</File>
+					</Folder>
+					<Folder name="CodeBuiltInTypeName">
+						<File>CodeBuiltInTypeName.h</File>
+						<File>CodeBuiltInTypeName.cpp</File>
+					</Folder>
+					<Folder name="CodePointerOperatorType">
+						<File>CodePointerOperatorType.h</File>
+						<File>CodePointerOperatorType.cpp</File>
+					</Folder>
+					<Folder name="CodePointerOperator">
+						<File>CodePointerOperator.h</File>
+						<File>CodePointerOperator.cpp</File>
+					</Folder>
+					<Folder name="CodeQualifiedName">
+						<File>CodeQualifiedName.h</File>
+						<File>CodeQualifiedName.cpp</File>
+					</Folder>
+					<Folder name="CodePointerSpecifier">
+						<File>CodePointerSpecifier.h</File>
+						<File>CodePointerSpecifier.cpp</File>
+					</Folder>
+					<Folder name="CodeCoreType">
+						<File>CodeCoreType.h</File>
+						<File>CodeCoreType.cpp</File>
+					</Folder>
+					<Folder name="CodeCoreTypeName">
+						<File>CodeCoreTypeName.h</File>
+						<File>CodeCoreTypeName.cpp</File>
+					</Folder>
+					<Folder name="CodeTypeName">
+						<File>CodeTypeName.h</File>
+						<File>CodeTypeName.cpp</File>
+					</Folder>
 				</Folder>
 			</Folder>
 		</Folder>

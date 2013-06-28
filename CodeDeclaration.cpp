@@ -1,29 +1,30 @@
 #include "CodeDeclaration.h"
 #include "Sentence.h"
+#include "CodeNodeRegister.h"
 
-CodeDeclaration::CodeDeclaration(CodeTypeName type, const std::string& name)
-	: type(type), name(name)
+CodeDeclaration::CodeDeclaration(CodeTypeName typeName, const std::string& name)
+	: typeName(typeName), name(name)
 {
 }
 
-CodeNodeFactory::NonTerminalEntry CodeDeclaration::creator
+namespace
 {
-	"declaration",
+	CodeNodeRegister declaration
 	{
+		"declaration",
 		{
-			"<type-name> id ';'",
-			[](CodeNodeFactory::Items items)
 			{
-				return CodeNodePtr
+				"<type-name> id ';'",
+				[](CodeNodeItems items)
 				{
-					new CodeDeclaration
+					return new CodeDeclaration
 					{
 						items[0]->AsCode<CodeTypeName>(),
 						items[1]->AsToken()
-					}
-				};
+					};
+				}
 			}
 		}
-	}
-};
+	};
+}
 

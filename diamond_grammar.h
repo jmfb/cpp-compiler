@@ -54,35 +54,7 @@
 	';';
 <variable-initializer> =
 	'=' <expression>;
-<type-name> =
-	<core-type> <pointer-specifier-opt> |
-	"const" <core-type> <pointer-specifier-opt>;
-<core-type> =
-	<built-in-type> |
-	<qualified-name>;
-<built-in-type> =
-	"var" |
-	"void" |
-	"bool" |
-	"char" |
-	"wchar" |
-	"byte" |
-	"ushort" |
-	"short" |
-	"uint" |
-	"int" |
-	"ulong" |
-	"long" |
-	"float" |
-	"double" |
-	"ldouble";
-<pointer-specifier> =
-	<pointer-operator> <pointer-specifier-opt> |
-	<pointer-operator> "const" <pointer-specifier-opt>;
-<pointer-operator> =
-	'&' |
-	'*' |
-	'?';
+
 
 <class-member-constructor> =
 	<class-member-access> id '(' <argument-list-opt> ')' '{' <statement-list-opt> '}' |
@@ -256,6 +228,40 @@
 <return-statement> =
 	"return" <expression-opt> ';';
 
+#
+# Everything below this point has been implemented in the code model (properly).
+#
+
+<type-name> =
+	<core-type> <pointer-specifier-opt> |
+	"const" <core-type> <pointer-specifier-opt>;
+<core-type> =
+	<built-in-type> |
+	<qualified-name>;
+<built-in-type> =
+	"var" |
+	"void" |
+	"bool" |
+	"char" |
+	"wchar" |
+	"byte" |
+	"ushort" |
+	"short" |
+	"uint" |
+	"int" |
+	"ulong" |
+	"long" |
+	"float" |
+	"double" |
+	"ldouble";
+<pointer-specifier> =
+	<pointer-operator> <pointer-specifier-opt> |
+	<pointer-operator> "const" <pointer-specifier-opt>;
+<pointer-operator> =
+	'&' |
+	'*' |
+	'?';
+	
 <qualified-name> =
 	id <qualified-suffix-opt>;
 <qualified-suffix> =

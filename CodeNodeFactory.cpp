@@ -1,29 +1,14 @@
 #include "CodeNodeFactory.h"
 #include <cstdlib>
 #include <sstream>
-#include "CodeTypeName.h"
-#include "CodeDeclaration.h"
-#include "CodeDeclarationList.h"
-#include "CodeTranslationUnit.h"
-
-CodeNodeFactory::CodeNodeFactory()
-	: creators {
-		CodeTypeName::creator,
-		CodeDeclaration::creator,
-		CodeDeclarationList::creator,
-		CodeDeclarationList::optionalCreator,
-		CodeTranslationUnit::creator
-	}
-{
-}
 
 CodeNodePtr CodeNodeFactory::Create(
 	const std::string& nonTerminal,
 	const std::string& production,
-	const std::deque<SentenceItemPtr>& items) const
+	const std::deque<SentenceItemPtr>& items)
 {
-	auto productionMap = creators.find(nonTerminal);
-	if (productionMap == creators.end())
+	auto productionMap = GetCreators().find(nonTerminal);
+	if (productionMap == GetCreators().end())
 	{
 		std::cout << "Unrecognized nonTerminal: " << nonTerminal << std::endl;
 		::exit(0);
@@ -34,13 +19,13 @@ CodeNodePtr CodeNodeFactory::Create(
 		std::cout << "Unrecognized " << nonTerminal << " production: " << production << std::endl;
 		::exit(0);
 	}
-	return creator->second(items);
+	return CodeNodePtr { creator->second(items) };
 }
 
-std::string CodeNodeFactory::GenerateGrammar() const
+std::string CodeNodeFactory::GenerateGrammar()
 {
 	std::ostringstream out;
-	for (auto& nonTerminal: creators)
+	for (auto& nonTerminal: GetCreators())
 	{
 		out << "<" << nonTerminal.first << "> =" << std::endl;
 		for (auto production = begin(nonTerminal.second); production != end(nonTerminal.second); ++production)
@@ -52,5 +37,16 @@ std::string CodeNodeFactory::GenerateGrammar() const
 		out << ";" << std::endl << std::endl;
 	}
 	return out.str();
+}
+
+void CodeNodeFactory::RegisterCreators(NonTerminalEntry entry)
+{
+	GetCreators().insert(entry);
+}
+
+CodeNodeFactory::NonTerminalMap& CodeNodeFactory::GetCreators()
+{
+	static NonTerminalMap creators;
+	return creators;
 }
 

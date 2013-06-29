@@ -1,6 +1,5 @@
 #include "CodeTypeName.h"
 #include "CodeNodeRegister.h"
-#include "Sentence.h"
 
 CodeTypeName::CodeTypeName(
 	bool isConst,

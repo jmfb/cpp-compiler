@@ -2,6 +2,7 @@
 #include <memory>
 #include <iostream>
 #include "Position.h"
+#include "CodeNode.h"
 
 class Sentence;
 
@@ -25,6 +26,8 @@ public:
 
 	template <typename T>
 	T& AsCode();
+
+	CodeNodePtr AsNode();
 
 	const std::string& AsToken();
 };

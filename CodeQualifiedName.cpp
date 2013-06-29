@@ -1,5 +1,4 @@
 #include "CodeQualifiedName.h"
-#include "Sentence.h"
 #include "CodeNodeRegister.h"
 
 CodeQualifiedName::CodeQualifiedName(
@@ -29,7 +28,7 @@ namespace
 			}
 		}
 	};
-	
+
 	CodeNodeRegister qualifiedSuffix
 	{
 		"qualified-suffix",
@@ -47,7 +46,7 @@ namespace
 			}
 		}
 	};
-	
+
 	CodeNodeRegister qualifiedSuffixOpt
 	{
 		"qualified-suffix-opt",

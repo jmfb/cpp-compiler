@@ -1,5 +1,6 @@
 #pragma once
 #include "CodeNodeFactory.h"
+#include "Sentence.h"
 
 class CodeNodeRegister
 {

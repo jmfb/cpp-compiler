@@ -1,15 +1,23 @@
 #pragma once
-#include "CodeTypeName.h"
 #include "CodeNode.h"
-#include <string>
+#include "CodeDeclarationType.h"
+#include "CodeNamespaceDeclaration.h"
+#include "CodeClassDeclaration.h"
 
 class CodeDeclaration : public CodeNode
 {
 public:
-	CodeDeclaration(CodeTypeName typeName, const std::string& name);
+	CodeDeclaration() = default;
+	CodeDeclaration(const CodeNamespaceDeclaration& namespaceDeclaration);
+	CodeDeclaration(const CodeClassDeclaration& classDeclaration);
+	CodeDeclaration(const CodeDeclaration& rhs) = default;
+	~CodeDeclaration() noexcept(true) = default;
+
+	CodeDeclaration& operator=(const CodeDeclaration& rhs) = default;
 
 public:
-	CodeTypeName typeName;
-	std::string name;
+	CodeDeclarationType type;
+	CodeNamespaceDeclaration namespaceDeclaration;
+	CodeClassDeclaration classDeclaration;
 };
 

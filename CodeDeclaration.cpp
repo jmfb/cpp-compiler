@@ -1,9 +1,13 @@
 #include "CodeDeclaration.h"
-#include "Sentence.h"
 #include "CodeNodeRegister.h"
 
-CodeDeclaration::CodeDeclaration(CodeTypeName typeName, const std::string& name)
-	: typeName(typeName), name(name)
+CodeDeclaration::CodeDeclaration(const CodeNamespaceDeclaration& namespaceDeclaration)
+	: type(CodeDeclarationType::Namespace), namespaceDeclaration(namespaceDeclaration)
+{
+}
+
+CodeDeclaration::CodeDeclaration(const CodeClassDeclaration& classDeclaration)
+	: type(CodeDeclarationType::Class), classDeclaration(classDeclaration)
 {
 }
 
@@ -14,13 +18,22 @@ namespace
 		"declaration",
 		{
 			{
-				"<type-name> id ';'",
+				"<namespace-declaration>",
 				[](CodeNodeItems items)
 				{
 					return new CodeDeclaration
 					{
-						items[0]->AsCode<CodeTypeName>(),
-						items[1]->AsToken()
+						items[0]->AsCode<CodeNamespaceDeclaration>()
+					};
+				}
+			},
+			{
+				"<class-declaration>",
+				[](CodeNodeItems items)
+				{
+					return new CodeDeclaration
+					{
+						items[0]->AsCode<CodeClassDeclaration>()
 					};
 				}
 			}

@@ -11,33 +11,24 @@ CodePointerOperator::CodePointerOperator(CodePointerOperatorType type, bool isCo
 {
 }
 
+#define MAP_OP(op,opEnum) \
+	{ \
+		"'" op "'", \
+		[](CodeNodeItems) \
+		{ \
+			return new CodePointerOperator { CodePointerOperatorType::opEnum }; \
+		} \
+	}
+
 namespace
 {
 	CodeNodeRegister pointerOperator
 	{
 		"pointer-operator",
 		{
-			{
-				"'&'",
-				[](CodeNodeItems)
-				{
-					return new CodePointerOperator { CodePointerOperatorType::Reference };
-				}
-			},
-			{
-				"'*'",
-				[](CodeNodeItems)
-				{
-					return new CodePointerOperator { CodePointerOperatorType::Pointer };
-				}
-			},
-			{
-				"'?'",
-				[](CodeNodeItems)
-				{
-					return new CodePointerOperator { CodePointerOperatorType::Nullable };
-				}
-			}
+			MAP_OP("&", Reference),
+			MAP_OP("*", Pointer),
+			MAP_OP("?", Nullable)
 		}
 	};
 }

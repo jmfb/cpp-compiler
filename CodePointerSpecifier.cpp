@@ -1,5 +1,4 @@
 #include "CodePointerSpecifier.h"
-#include "Sentence.h"
 #include "CodeNodeRegister.h"
 
 CodePointerSpecifier::CodePointerSpecifier(

@@ -16,6 +16,10 @@
 #include "Sentence.h"
 #include "Symbol.h"
 
+#include "CodeDeclaration.h"
+
+void Test(CodeTranslationUnit& translationUnit);
+
 int main(int argc, char** argv)
 {
 	try
@@ -53,18 +57,7 @@ int main(int argc, char** argv)
 		std::ofstream outSymbol { symbolFileName };
 		symtab.WriteXml(outSymbol);
 
-		auto& translationUnit = item->AsCode<CodeTranslationUnit>();
-		for (auto& declaration: translationUnit.declarationList.declarations)
-		{
-			std::cout << "Declared: " << declaration.name << std::endl;
-			if (declaration.typeName.coreTypeName.type == CodeCoreType::QualifiedName)
-			{
-				std::cout << "  Type: ";
-				for (auto& name: declaration.typeName.coreTypeName.qualifiedName.names)
-					std::cout << name << " ";
-				std::cout << std::endl;
-			}
-		}
+		Test(item->AsCode<CodeTranslationUnit>());
 	}
 	catch (const std::exception& exception)
 	{
@@ -74,5 +67,48 @@ int main(int argc, char** argv)
 	std::cout << "Press enter to continue...";
 	std::cin.get();
 	return 0;
+}
+
+class Writer
+{
+public:
+	static void Write(const CodeNamespaceDeclaration& namespaceDeclaration)
+	{
+		for (auto name: namespaceDeclaration.name.names)
+			std::cout << "namespace " << name << " { ";
+		for (auto& declaration: namespaceDeclaration.declarationList.declarations)
+			Write(declaration);
+		for (auto name: namespaceDeclaration.name.names)
+			std::cout << "} ";
+	}
+
+	static void Write(const CodeClassDeclaration& classDeclaration)
+	{
+		for (auto index = 1ul; index < classDeclaration.name.names.size(); ++index)
+			std::cout << "namespace " << classDeclaration.name.names[index - 1] << " { ";
+		std::cout << "class " << classDeclaration.name.names.back() << " { } ; ";
+		for (auto index = 1ul; index < classDeclaration.name.names.size(); ++index)
+			std::cout << "} ";
+	}
+
+	static void Write(const CodeDeclaration& declaration)
+	{
+		switch(declaration.type)
+		{
+		case CodeDeclarationType::Namespace:
+			Write(declaration.namespaceDeclaration);
+			break;
+
+		case CodeDeclarationType::Class:
+			Write(declaration.classDeclaration);
+			break;
+		}
+	}
+};
+
+void Test(CodeTranslationUnit& translationUnit)
+{
+	for (auto& declaration: translationUnit.declarationList.declarations)
+		Writer::Write(declaration);
 }
 

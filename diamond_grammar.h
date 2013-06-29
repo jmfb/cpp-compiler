@@ -1,20 +1,3 @@
-<translation-unit> =
-	<using-list-opt> <namespace-declaration>;
-
-<using-list> =
-	<using-statement> <using-list-opt>;
-<using-statement> =
-	<using-import> |
-	<using-alias>;
-<using-import> =
-	"using" <qualified-name> ';';
-<using-alias> =
-	"using" id '=' <qualified-name> ';';
-
-<namespace-declaration> =
-	"namespace" <qualified-name> '{' <declaration-list-opt> '}';
-<declaration-list> =
-	<declaration> <declaration-list-opt>;
 <declaration> =
 	<class-declaration> |
 	<enum-declaration>;
@@ -54,7 +37,6 @@
 	';';
 <variable-initializer> =
 	'=' <expression>;
-
 
 <class-member-constructor> =
 	<class-member-access> id '(' <argument-list-opt> ')' '{' <statement-list-opt> '}' |
@@ -232,6 +214,24 @@
 # Everything below this point has been implemented in the code model (properly).
 #
 
+<translation-unit> =
+	<using-list-opt> <namespace-declaration>;
+
+<using-list> =
+	<using-statement> <using-list-opt>;
+<using-statement> =
+	<using-import> |
+	<using-alias>;
+<using-import> =
+	"using" <qualified-name> ';';
+<using-alias> =
+	"using" id '=' <qualified-name> ';';
+
+<namespace-declaration> =
+	"namespace" <qualified-name> '{' <declaration-list-opt> '}';
+<declaration-list> =
+	<declaration> <declaration-list-opt>;
+
 <type-name> =
 	<core-type> <pointer-specifier-opt> |
 	"const" <core-type> <pointer-specifier-opt>;
@@ -261,7 +261,7 @@
 	'&' |
 	'*' |
 	'?';
-	
+
 <qualified-name> =
 	id <qualified-suffix-opt>;
 <qualified-suffix> =

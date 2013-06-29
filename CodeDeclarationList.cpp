@@ -1,6 +1,6 @@
 #include "CodeDeclarationList.h"
-#include "Sentence.h"
 #include "CodeNodeRegister.h"
+#include "CodeDeclaration.h"
 
 CodeDeclarationList::CodeDeclarationList(
 	const CodeDeclaration& declaration,
@@ -32,7 +32,7 @@ namespace
 			}
 		}
 	};
-	
+
 	CodeNodeRegister declarationListOpt
 	{
 		"declaration-list-opt",

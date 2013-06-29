@@ -1,6 +1,5 @@
 #include "CodeCoreTypeName.h"
 #include "CodeNodeRegister.h"
-#include "Sentence.h"
 
 CodeCoreTypeName::CodeCoreTypeName(const CodeBuiltInTypeName& builtInTypeName)
 	: type(CodeCoreType::BuiltInTypeName), builtInTypeName(builtInTypeName)

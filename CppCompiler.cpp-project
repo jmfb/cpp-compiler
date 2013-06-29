@@ -330,18 +330,6 @@
 					<File>CodeNodeRegister.h</File>
 					<File>CodeNodeRegister.cpp</File>
 				</Folder>
-				<Folder name="CodeTranslationUnit">
-					<File>CodeTranslationUnit.h</File>
-					<File>CodeTranslationUnit.cpp</File>
-				</Folder>
-				<Folder name="CodeDeclaration">
-					<File>CodeDeclaration.h</File>
-					<File>CodeDeclaration.cpp</File>
-				</Folder>
-				<Folder name="CodeDeclarationList">
-					<File>CodeDeclarationList.h</File>
-					<File>CodeDeclarationList.cpp</File>
-				</Folder>
 				<Folder name="Types">
 					<Folder name="CodeBuiltInType">
 						<File>CodeBuiltInType.h</File>
@@ -378,6 +366,46 @@
 					<Folder name="CodeTypeName">
 						<File>CodeTypeName.h</File>
 						<File>CodeTypeName.cpp</File>
+					</Folder>
+				</Folder>
+				<Folder name="Translation Unit">
+					<Folder name="CodeTranslationUnit">
+						<File>CodeTranslationUnit.h</File>
+						<File>CodeTranslationUnit.cpp</File>
+					</Folder>
+					<Folder name="CodeDeclaration">
+						<File>CodeDeclaration.h</File>
+						<File>CodeDeclaration.cpp</File>
+					</Folder>
+					<Folder name="CodeDeclarationList">
+						<File>CodeDeclarationList.h</File>
+						<File>CodeDeclarationList.cpp</File>
+					</Folder>
+					<Folder name="CodeUsingAlias">
+						<File>CodeUsingAlias.h</File>
+						<File>CodeUsingAlias.cpp</File>
+					</Folder>
+					<Folder name="CodeUsingImport">
+						<File>CodeUsingImport.h</File>
+						<File>CodeUsingImport.cpp</File>
+					</Folder>
+					<Folder name="CodeUsingList">
+						<File>CodeUsingList.h</File>
+						<File>CodeUsingList.cpp</File>
+					</Folder>
+					<Folder name="CodeDeclarationType">
+						<File>CodeDeclarationType.h</File>
+						<File>CodeDeclarationType.cpp</File>
+					</Folder>
+					<Folder name="CodeNamespaceDeclaration">
+						<File>CodeNamespaceDeclaration.h</File>
+						<File>CodeNamespaceDeclaration.cpp</File>
+					</Folder>
+				</Folder>
+				<Folder name="Classes">
+					<Folder name="CodeClassDeclaration">
+						<File>CodeClassDeclaration.h</File>
+						<File>CodeClassDeclaration.cpp</File>
 					</Folder>
 				</Folder>
 			</Folder>

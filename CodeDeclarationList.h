@@ -1,7 +1,8 @@
 #pragma once
 #include "CodeNode.h"
-#include "CodeDeclaration.h"
 #include <vector>
+
+class CodeDeclaration;
 
 class CodeDeclarationList : public CodeNode
 {

@@ -1,0 +1,2 @@
+CodeNodeRegister.o: CodeNodeRegister.cpp CodeNodeRegister.h \
+ CodeNodeFactory.h SentenceItem.h Position.h CodeNode.h Sentence.h

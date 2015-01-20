@@ -1,0 +1,3 @@
+GrammarAction.o: GrammarAction.cpp GrammarAction.h GrammarActionType.h \
+ BinaryReader.h BinaryWriter.h SymbolTable.h Token.h TokenType.h \
+ Position.h Scope.h SymbolLink.h

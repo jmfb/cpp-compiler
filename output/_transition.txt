@@ -1,0 +1,58 @@
+TransitionList: 0, Actions
+id: Shift 8
+val: Shift 7
+> Goto Table
+A -> 2
+B -> 3
+C -> 4
+D -> 5
+E -> 6
+translation-unit -> 1
+
+TransitionList: 1, Actions
+'': Accept
+> Goto Table
+
+TransitionList: 2, Actions
+'': Reduce translation-unit -> <A>
+> Goto Table
+
+TransitionList: 3, Actions
+'': Reduce translation-unit -> <B>
+> Goto Table
+
+TransitionList: 4, Actions
+id: Shift 9
+> Goto Table
+
+TransitionList: 5, Actions
+';': Shift 10
+> Goto Table
+
+TransitionList: 6, Actions
+id: Reduce C -> <E>
+';': Reduce C -> <E>
+> Goto Table
+
+TransitionList: 7, Actions
+';': Reduce D -> val
+> Goto Table
+
+TransitionList: 8, Actions
+id: Reduce E -> id
+';': Reduce E -> id
+> Goto Table
+
+TransitionList: 9, Actions
+';': Shift 11
+> Goto Table
+
+TransitionList: 10, Actions
+'': Reduce B -> <D> ';'
+> Goto Table
+
+TransitionList: 11, Actions
+'': Reduce A -> <C> id ';'
+> Goto Table
+
+

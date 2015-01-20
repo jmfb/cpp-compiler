@@ -1,0 +1,3 @@
+CodeClassDeclaration.o: CodeClassDeclaration.cpp CodeClassDeclaration.h \
+ CodeNode.h CodeQualifiedName.h CodeNodeRegister.h CodeNodeFactory.h \
+ SentenceItem.h Position.h Sentence.h

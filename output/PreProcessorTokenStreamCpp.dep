@@ -1,0 +1,4 @@
+PreProcessorTokenStreamCpp.o: PreProcessorTokenStreamCpp.cpp \
+ PreProcessorTokenStreamCpp.h Char.h Position.h PreProcessorToken.h \
+ PreProcessorTokenType.h PreProcessorTokenStream.h CharStream.h \
+ PreProcessorLine.h

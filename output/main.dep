@@ -1,0 +1,14 @@
+main.o: main.cpp CharStreamDiamond.h CharStream.h Char.h Position.h \
+ PreProcessorTokenStreamDiamond.h PreProcessorToken.h \
+ PreProcessorTokenType.h PreProcessorTokenStream.h PreProcessorLine.h \
+ PreProcessorDiamond.h PreProcessor.h PreProcessorBlockEvaluator.h \
+ PreProcessorBlock.h TokenStreamDiamond.h TokenStream.h Token.h \
+ TokenType.h ConflictResolverDiamond.h ConflictResolver.h \
+ ConflictResolution.h Terminal.h TerminalIdentifierType.h GrammarAction.h \
+ GrammarActionType.h BinaryReader.h BinaryWriter.h SymbolTable.h Scope.h \
+ SymbolLink.h TransitionAction.h TransitionType.h Production.h \
+ ProductionItem.h CodeNodeFactory.h SentenceItem.h CodeNode.h \
+ CodeTranslationUnit.h CodeUsingList.h CodeDeclarationList.h ParserLALR.h \
+ TransitionTable.h TransitionList.h Sentence.h Symbol.h CodeDeclaration.h \
+ CodeDeclarationType.h CodeNamespaceDeclaration.h CodeQualifiedName.h \
+ CodeClassDeclaration.h

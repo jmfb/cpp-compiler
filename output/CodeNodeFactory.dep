@@ -1,0 +1,2 @@
+CodeNodeFactory.o: CodeNodeFactory.cpp CodeNodeFactory.h SentenceItem.h \
+ Position.h CodeNode.h

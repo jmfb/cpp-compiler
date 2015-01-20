@@ -1,0 +1,5 @@
+CodeNamespaceDeclaration.o: CodeNamespaceDeclaration.cpp \
+ CodeNamespaceDeclaration.h CodeNode.h CodeQualifiedName.h \
+ CodeDeclarationList.h CodeNodeRegister.h CodeNodeFactory.h \
+ SentenceItem.h Position.h Sentence.h CodeDeclaration.h \
+ CodeDeclarationType.h CodeClassDeclaration.h

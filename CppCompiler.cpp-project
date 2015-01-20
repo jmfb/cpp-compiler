@@ -9,7 +9,9 @@
 		<Multithreaded>True</Multithreaded>
 		<OutputFolder>output</OutputFolder>
 		<OutputFileName>{ProjectName}.exe</OutputFileName>
-		<IncludeDirectories/>
+		<IncludeDirectories>
+			<IncludeDirectory>c:\save\code</IncludeDirectory>
+		</IncludeDirectories>
 		<Libraries>
 			<Library>ws2_32</Library>
 		</Libraries>

@@ -1,0 +1,86 @@
+<built-in-type-name> =
+	"bool" |
+	"byte" |
+	"char" |
+	"double" |
+	"float" |
+	"int" |
+	"ldouble" |
+	"long" |
+	"short" |
+	"uint" |
+	"ulong" |
+	"ushort" |
+	"var" |
+	"void" |
+	"wchar";
+
+<class-declaration> =
+	"class" <qualified-name> '{' '}';
+
+<core-type-name> =
+	<built-in-type-name> |
+	<qualified-name>;
+
+<declaration> =
+	<class-declaration> |
+	<namespace-declaration>;
+
+<declaration-list> =
+	<declaration> <declaration-list-opt>;
+
+<declaration-list-opt> =
+	<declaration-list> |
+	@;
+
+<namespace-declaration> =
+	"namespace" <qualified-name> '{' <declaration-list-opt> '}';
+
+<pointer-operator> =
+	'&' |
+	'*' |
+	'?';
+
+<pointer-specifier> =
+	<pointer-operator> "const" <pointer-specifier-opt> |
+	<pointer-operator> <pointer-specifier-opt>;
+
+<pointer-specifier-opt> =
+	<pointer-specifier> |
+	@;
+
+<qualified-name> =
+	id <qualified-suffix-opt>;
+
+<qualified-suffix> =
+	'::' id <qualified-suffix-opt>;
+
+<qualified-suffix-opt> =
+	<qualified-suffix> |
+	@;
+
+<translation-unit> =
+	<using-list-opt> <declaration-list>;
+
+<type-name> =
+	"const" <core-type-name> <pointer-specifier-opt> |
+	<core-type-name> <pointer-specifier-opt>;
+
+<using-alias> =
+	"using" id '=' <qualified-name> ';';
+
+<using-import> =
+	"using" <qualified-name> ';';
+
+<using-list> =
+	<using-statement> <using-list-opt>;
+
+<using-list-opt> =
+	<using-list> |
+	@;
+
+<using-statement> =
+	<using-alias> |
+	<using-import>;
+
+

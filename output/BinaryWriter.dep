@@ -1,0 +1,1 @@
+BinaryWriter.o: BinaryWriter.cpp BinaryWriter.h

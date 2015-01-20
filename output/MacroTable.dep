@@ -1,0 +1,3 @@
+MacroTable.o: MacroTable.cpp MacroTable.h Macro.h Position.h \
+ PreProcessorToken.h PreProcessorTokenType.h MacroType.h \
+ MacroTableExpander.h MacroExpander.h

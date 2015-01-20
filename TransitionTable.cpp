@@ -42,10 +42,10 @@ SentenceItemPtr TransitionTable::Parse(TokenStream& tokens, SymbolTable& symtab,
 					stack.pop();
 					state.pop();
 				}
-				sentence.codeNode = CodeNodeFactory::Create(
-					action.nonTerminal,
-					action.productionString,
-					sentence.items);
+				//sentence.codeNode = CodeNodeFactory::Create(
+					//action.nonTerminal,
+					//action.productionString,
+					//sentence.items);
 				stack.push(item);
 				state.push(table[state.top()].GetGoto(action.nonTerminal));
 			}

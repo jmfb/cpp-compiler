@@ -1,0 +1,4 @@
+PreProcessorDiamond.o: PreProcessorDiamond.cpp PreProcessorDiamond.h \
+ PreProcessor.h PreProcessorBlockEvaluator.h PreProcessorToken.h \
+ Position.h PreProcessorTokenType.h PreProcessorBlock.h \
+ PreProcessorTokenStream.h CharStream.h Char.h PreProcessorLine.h

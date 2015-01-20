@@ -1,0 +1,2 @@
+PreProcessorBlock.o: PreProcessorBlock.cpp PreProcessorBlock.h \
+ PreProcessorBlockEvaluator.h

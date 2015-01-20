@@ -1,0 +1,4 @@
+PreProcessorDirectiveBlock.o: PreProcessorDirectiveBlock.cpp \
+ PreProcessorDirectiveBlock.h Position.h PreProcessorBlock.h \
+ PreProcessorBlockEvaluator.h PreProcessorToken.h PreProcessorTokenType.h \
+ PreProcessorDirectiveType.h

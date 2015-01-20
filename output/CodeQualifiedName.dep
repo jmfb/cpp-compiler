@@ -1,0 +1,3 @@
+CodeQualifiedName.o: CodeQualifiedName.cpp CodeQualifiedName.h CodeNode.h \
+ CodeNodeRegister.h CodeNodeFactory.h SentenceItem.h Position.h \
+ Sentence.h

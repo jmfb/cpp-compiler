@@ -1,0 +1,3 @@
+CodePointerOperator.o: CodePointerOperator.cpp CodePointerOperator.h \
+ CodeNode.h CodePointerOperatorType.h CodeNodeRegister.h \
+ CodeNodeFactory.h SentenceItem.h Position.h Sentence.h

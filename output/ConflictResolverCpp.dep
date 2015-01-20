@@ -1,0 +1,6 @@
+ConflictResolverCpp.o: ConflictResolverCpp.cpp ConflictResolverCpp.h \
+ ConflictResolver.h ConflictResolution.h Terminal.h TokenType.h \
+ TerminalIdentifierType.h GrammarAction.h GrammarActionType.h \
+ BinaryReader.h BinaryWriter.h SymbolTable.h Token.h Position.h Scope.h \
+ SymbolLink.h TransitionAction.h TransitionType.h Production.h \
+ ProductionItem.h

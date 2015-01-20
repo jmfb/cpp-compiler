@@ -1,0 +1,2 @@
+CharStreamDiamond.o: CharStreamDiamond.cpp CharStreamDiamond.h \
+ CharStream.h Char.h Position.h

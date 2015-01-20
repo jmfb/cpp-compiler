@@ -1,0 +1,10 @@
+PreProcessorCpp.o: PreProcessorCpp.cpp PreProcessorCpp.h MacroTable.h \
+ Macro.h Position.h PreProcessorToken.h PreProcessorTokenType.h \
+ MacroType.h MacroTableExpander.h PreProcessor.h \
+ PreProcessorBlockEvaluator.h PreProcessorBlock.h \
+ PreProcessorTokenStream.h CharStream.h Char.h PreProcessorLine.h \
+ PreProcessorCppBlockBuilder.h PreProcessorDirectiveType.h \
+ PreProcessorConditionType.h PreProcessorConditionBlock.h \
+ PreProcessorCondition.h PreProcessorTokenBlock.h \
+ PreProcessorDirectiveBlock.h MacroExpander.h CharStreamCpp.h \
+ PreProcessorTokenStreamCpp.h

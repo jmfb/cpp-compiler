@@ -1,0 +1,3 @@
+PreProcessorExpressionBinary.o: PreProcessorExpressionBinary.cpp \
+ PreProcessorExpressionBinary.h PreProcessorExpressionNode.h \
+ PreProcessorExpressionOperatorType.h

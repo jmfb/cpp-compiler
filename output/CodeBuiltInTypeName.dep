@@ -1,0 +1,3 @@
+CodeBuiltInTypeName.o: CodeBuiltInTypeName.cpp CodeBuiltInTypeName.h \
+ CodeNode.h CodeBuiltInType.h CodeNodeRegister.h CodeNodeFactory.h \
+ SentenceItem.h Position.h Sentence.h

@@ -1,0 +1,3 @@
+PreProcessorExpressionUnary.o: PreProcessorExpressionUnary.cpp \
+ PreProcessorExpressionUnary.h PreProcessorExpressionNode.h \
+ PreProcessorExpressionOperatorType.h

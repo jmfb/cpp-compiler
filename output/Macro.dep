@@ -1,0 +1,2 @@
+Macro.o: Macro.cpp Macro.h Position.h PreProcessorToken.h \
+ PreProcessorTokenType.h

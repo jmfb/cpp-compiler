@@ -1,0 +1,2 @@
+PreProcessorConditionType.o: PreProcessorConditionType.cpp \
+ PreProcessorConditionType.h

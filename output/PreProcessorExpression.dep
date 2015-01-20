@@ -1,0 +1,7 @@
+PreProcessorExpression.o: PreProcessorExpression.cpp \
+ PreProcessorExpression.h MacroTableExpander.h PreProcessorToken.h \
+ Position.h PreProcessorTokenType.h MacroType.h \
+ PreProcessorExpressionNode.h PreProcessorExpressionOperatorType.h \
+ MacroExpander.h Macro.h PreProcessorExpressionOperator.h \
+ PreProcessorExpressionNumber.h PreProcessorExpressionUnary.h \
+ PreProcessorExpressionBinary.h

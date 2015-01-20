@@ -1,7 +1,4 @@
-namespace A::B
-{
-	class C
-	{
-	}
-}
+//A a;
+//0;
+a;
 

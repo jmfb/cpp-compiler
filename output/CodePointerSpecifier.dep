@@ -1,0 +1,4 @@
+CodePointerSpecifier.o: CodePointerSpecifier.cpp CodePointerSpecifier.h \
+ CodeNode.h CodePointerOperatorType.h CodePointerOperator.h \
+ CodeNodeRegister.h CodeNodeFactory.h SentenceItem.h Position.h \
+ Sentence.h

@@ -1,3 +1,220 @@
+<translation-unit> =  <A> | <B>;
+<A> = <C> id ';';
+<C> = <E>;
+<B> = <D> ';';
+<D> = <E> | val;
+<E> = id;
+
+##
+
+<translation-unit> =
+	<declaration-list-opt>;
+<declaration-list> =
+	<declaration> <declaration-list-opt>;
+<declaration-list-opt> =
+	<declaration-list> |
+	@;
+<declaration> =
+	<declaration-statement> |
+	<expression-statement>;
+<declaration-statement> =
+	<type-name> id ';';
+<expression-statement> =
+	<primary-expression>;
+<primary-expression> =
+	<qualified-name> |
+	val;
+<type-name> =
+	<qualified-name>;
+<qualified-name> =
+	id;
+
+##
+
+##
+
+<access-modifier> =
+	"public" |
+	"protected" |
+	"private";
+
+<base-class> =
+	<modifier> <qualified-name>;
+
+<base-class-list> =
+	<base-class> |
+	<base-class> ',' <base-class-list>;
+
+<class-declaration> =
+	"class" <qualified-name> '{' <class-member-list-opt> '}' |
+	"class" <qualified-name> ':' <base-class-list> '{' <class-member-list-opt> '}';
+
+<class-member> =
+	<property>;
+
+<class-member-list> =
+	<class-member> <class-member-list-opt>;
+
+<class-member-list-opt> =
+	<class-member-list> |
+	@;
+
+<function-body> =
+	'{' <statement-list-opt> '}' |
+	';';
+
+<modifier> =
+	<access-modifier> |
+	<access-modifier> "static" |
+	<access-modifier> "abstract" |
+	<access-modifier> "virtual" |
+	<access-modifier> "override" |
+	<access-modifier> "final";
+
+<property> =
+	<modifier> <type-name> <qualified-name> '=' <expression> <property-body> |
+	<modifier> <type-name> <qualified-name> <property-body>;
+
+<property-body> =
+	'{' <property-function-definition-list> '}' |
+	';';
+
+<property-function> =
+	"get" |
+	"getcopy" |
+	"getref" |
+	"set" |
+	"setcopy";
+
+<property-function-definition> =
+	<property-function> <function-body> |
+	<access-modifier> <property-function> <function-body>;
+
+<property-function-definition-list> =
+	<property-function-definition> |
+	<property-function-definition> <property-function-definition-list>;
+
+<expression> =
+	<primary-expression>;
+
+<primary-expression> =
+	<qualified-name> |
+	val;
+
+<qualified-name> =
+	id <qualified-suffix-opt>;
+
+<qualified-suffix> =
+	'::' id <qualified-suffix-opt>;
+
+<qualified-suffix-opt> =
+	<qualified-suffix> |
+	@;
+
+<declaration-statement> =
+	<type-name> id ';';
+
+<expression-statement> =
+	<expression> ';';
+
+<return-statement> =
+	"return" ';' |
+	"return" <expression> ';';
+
+<statement> =
+	<declaration-statement> |
+	<expression-statement> |
+	<return-statement>;
+
+<statement-list> =
+	<statement> <statement-list-opt>;
+
+<statement-list-opt> =
+	<statement-list> |
+	@;
+
+<declaration> =
+	<namespace-declaration> |
+	<class-declaration>;
+
+<declaration-list> =
+	<declaration> <declaration-list-opt>;
+
+<declaration-list-opt> =
+	<declaration-list> |
+	@;
+
+<namespace-declaration> =
+	"namespace" <qualified-name> '{' <declaration-list-opt> '}';
+
+<translation-unit> =
+	<using-list-opt> <declaration-list-opt>;
+
+<using-alias> =
+	"using" id '=' <qualified-name> ';';
+
+<using-import> =
+	"using" <qualified-name> ';';
+
+<using-item> =
+	<using-import> |
+	<using-alias>;
+
+<using-list> =
+	<using-item> <using-list-opt>;
+
+<using-list-opt> =
+	<using-list> |
+	@;
+
+<built-in-type-name> =
+	"void" |
+	"var" |
+	"bool" |
+	"char" |
+	"wchar" |
+	"byte" |
+	"short" |
+	"ushort" |
+	"int" |
+	"uint" |
+	"long" |
+	"ulong" |
+	"float" |
+	"double" |
+	"ldouble";
+
+<core-type-name> =
+	<built-in-type-name> |
+	<qualified-name>;
+
+<pointer-operator> =
+	'&' |
+	'*' |
+	'?' |
+	'^' |
+	'[' <expression> ']' |
+	'[' ']';
+
+<pointer-specifier> =
+	<pointer-operator> |
+	<pointer-operator> "const";
+
+<pointer-specifier-list> =
+	<pointer-specifier> <pointer-specifier-list-opt>;
+
+<pointer-specifier-list-opt> =
+	<pointer-specifier-list> |
+	@;
+
+<type-name> =
+	<core-type-name> <pointer-specifier-list-opt> |
+	"const" <core-type-name> <pointer-specifier-list-opt>;
+
+
+##
+##
+
 <declaration> =
 	<class-declaration> |
 	<enum-declaration>;
@@ -267,3 +484,5 @@
 <qualified-suffix> =
 	'::' id <qualified-suffix-opt>;
 
+
+##

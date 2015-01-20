@@ -1,0 +1,5 @@
+TransitionAction.o: TransitionAction.cpp TransitionAction.h \
+ TransitionType.h Production.h Terminal.h TokenType.h \
+ TerminalIdentifierType.h GrammarAction.h GrammarActionType.h \
+ BinaryReader.h BinaryWriter.h SymbolTable.h Token.h Position.h Scope.h \
+ SymbolLink.h ProductionItem.h

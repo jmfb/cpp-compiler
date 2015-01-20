@@ -1,0 +1,4 @@
+CodeCoreTypeName.o: CodeCoreTypeName.cpp CodeCoreTypeName.h CodeNode.h \
+ CodeCoreType.h CodeBuiltInTypeName.h CodeBuiltInType.h \
+ CodeQualifiedName.h CodeNodeRegister.h CodeNodeFactory.h SentenceItem.h \
+ Position.h Sentence.h

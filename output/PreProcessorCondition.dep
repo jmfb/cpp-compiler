@@ -1,0 +1,6 @@
+PreProcessorCondition.o: PreProcessorCondition.cpp \
+ PreProcessorCondition.h Position.h PreProcessorConditionType.h \
+ PreProcessorToken.h PreProcessorTokenType.h PreProcessorBlock.h \
+ PreProcessorBlockEvaluator.h MacroTableExpander.h MacroType.h \
+ PreProcessorExpression.h PreProcessorExpressionNode.h \
+ PreProcessorExpressionOperatorType.h

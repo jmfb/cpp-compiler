@@ -1,0 +1,4 @@
+Grammar.o: Grammar.cpp Grammar.h NonTerminal.h Production.h Terminal.h \
+ TokenType.h TerminalIdentifierType.h GrammarAction.h GrammarActionType.h \
+ BinaryReader.h BinaryWriter.h SymbolTable.h Token.h Position.h Scope.h \
+ SymbolLink.h ProductionItem.h GrammarParser.h

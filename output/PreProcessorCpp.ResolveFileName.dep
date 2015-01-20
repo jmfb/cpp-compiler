@@ -1,0 +1,13 @@
+PreProcessorCpp.ResolveFileName.o: PreProcessorCpp.ResolveFileName.cpp \
+ PreProcessorCpp.h MacroTable.h Macro.h Position.h PreProcessorToken.h \
+ PreProcessorTokenType.h MacroType.h MacroTableExpander.h PreProcessor.h \
+ PreProcessorBlockEvaluator.h PreProcessorBlock.h \
+ PreProcessorTokenStream.h CharStream.h Char.h PreProcessorLine.h \
+ c:\save\code/CRL/FileUtility.h c:\save\code/CRL/CScope.h \
+ c:\save\code/CRL/ErrorUtility.h c:\save\code/CRL/CError.h \
+ c:\save\code/CRL/StringUtility.h c:\save\code/CRL/TypeUtility.h \
+ c:\save\code/CRL/CCallStack.h c:\save\code/CRL/CSingleton.h \
+ c:\save\code/CRL/CLock.h c:\save\code/CRL/CCallTrace.h \
+ c:\save\code/CRL/TimeUtility.h c:\save\code/CRL/CDateTime.h \
+ c:\save\code/CRL/CDate.h c:\save\code/CRL/MathUtility.h \
+ c:\save\code/CRL/CTime.h

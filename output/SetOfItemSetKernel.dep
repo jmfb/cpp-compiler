@@ -1,0 +1,6 @@
+SetOfItemSetKernel.o: SetOfItemSetKernel.cpp SetOfItemSetKernel.h \
+ ItemSetX.h ItemX.h Production.h Terminal.h TokenType.h \
+ TerminalIdentifierType.h GrammarAction.h GrammarActionType.h \
+ BinaryReader.h BinaryWriter.h SymbolTable.h Token.h Position.h Scope.h \
+ SymbolLink.h ProductionItem.h ItemXPropogate.h Grammar.h NonTerminal.h \
+ ItemSet1.h Item1.h

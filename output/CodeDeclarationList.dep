@@ -1,0 +1,4 @@
+CodeDeclarationList.o: CodeDeclarationList.cpp CodeDeclarationList.h \
+ CodeNode.h CodeNodeRegister.h CodeNodeFactory.h SentenceItem.h \
+ Position.h Sentence.h CodeDeclaration.h CodeDeclarationType.h \
+ CodeNamespaceDeclaration.h CodeQualifiedName.h CodeClassDeclaration.h

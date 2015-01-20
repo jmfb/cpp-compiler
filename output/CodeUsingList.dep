@@ -1,0 +1,3 @@
+CodeUsingList.o: CodeUsingList.cpp CodeUsingList.h CodeNode.h \
+ CodeNodeRegister.h CodeNodeFactory.h SentenceItem.h Position.h \
+ Sentence.h

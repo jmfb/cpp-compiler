@@ -1,0 +1,2 @@
+Scope.o: Scope.cpp Scope.h SymbolLink.h Token.h TokenType.h Position.h \
+ Symbol.h

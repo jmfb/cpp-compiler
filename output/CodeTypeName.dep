@@ -1,0 +1,5 @@
+CodeTypeName.o: CodeTypeName.cpp CodeTypeName.h CodeNode.h \
+ CodeCoreTypeName.h CodeCoreType.h CodeBuiltInTypeName.h \
+ CodeBuiltInType.h CodeQualifiedName.h CodePointerSpecifier.h \
+ CodePointerOperatorType.h CodePointerOperator.h CodeNodeRegister.h \
+ CodeNodeFactory.h SentenceItem.h Position.h Sentence.h

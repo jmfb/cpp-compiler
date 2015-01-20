@@ -1,0 +1,4 @@
+PreProcessorTokenStreamDiamond.o: PreProcessorTokenStreamDiamond.cpp \
+ PreProcessorTokenStreamDiamond.h Char.h Position.h PreProcessorToken.h \
+ PreProcessorTokenType.h PreProcessorTokenStream.h CharStream.h \
+ PreProcessorLine.h

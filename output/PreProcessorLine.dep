@@ -1,0 +1,2 @@
+PreProcessorLine.o: PreProcessorLine.cpp PreProcessorLine.h \
+ PreProcessorToken.h Position.h PreProcessorTokenType.h

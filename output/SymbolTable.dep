@@ -1,0 +1,2 @@
+SymbolTable.o: SymbolTable.cpp SymbolTable.h Token.h TokenType.h \
+ Position.h Scope.h SymbolLink.h Symbol.h

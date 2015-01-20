@@ -1,0 +1,2 @@
+SentenceToken.o: SentenceToken.cpp SentenceToken.h Token.h TokenType.h \
+ Position.h SentenceItem.h CodeNode.h

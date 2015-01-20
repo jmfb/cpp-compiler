@@ -1,0 +1,1 @@
+Sentence.o: Sentence.cpp Sentence.h SentenceItem.h Position.h CodeNode.h

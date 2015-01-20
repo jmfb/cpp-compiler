@@ -33,11 +33,16 @@ int main(int argc, char** argv)
 		ConflictResolverDiamond resolver;
 		SymbolTable symtab;
 
-		std::cout << "Using CodeNodeFactory to generate grammar string." << std::endl;
-		auto grammarString = CodeNodeFactory::GenerateGrammar();
-		const auto grammarFileName = R"(c:\save\code\CppCompiler\output\_grammar.txt)";
-		std::ofstream outGrammar { grammarFileName };
-		outGrammar << grammarString << std::endl;
+		//std::cout << "Using CodeNodeFactory to generate grammar string." << std::endl;
+		//auto grammarString = CodeNodeFactory::GenerateGrammar();
+		//const auto grammarFileName = R"(c:\save\code\CppCompiler\output\_grammar.txt)";
+		//std::ofstream outGrammar { grammarFileName };
+		//outGrammar << grammarString << std::endl;
+		const auto grammarFileName = R"(c:\save\code\CppCompiler\diamond_grammar.h)";
+		std::ifstream inGrammar { grammarFileName };
+		std::ostringstream outGrammar;
+		inGrammar >> outGrammar.rdbuf();
+		auto grammarString = outGrammar.str();
 
 		std::cout << "Using LALR parser generator on grammar." << std::endl;
 		auto table = ParserLALR::Generate(grammarString, "translation-unit", resolver);

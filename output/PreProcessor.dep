@@ -1,0 +1,3 @@
+PreProcessor.o: PreProcessor.cpp PreProcessor.h \
+ PreProcessorBlockEvaluator.h PreProcessorToken.h Position.h \
+ PreProcessorTokenType.h PreProcessorBlock.h

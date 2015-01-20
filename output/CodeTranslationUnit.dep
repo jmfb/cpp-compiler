@@ -1,0 +1,5 @@
+CodeTranslationUnit.o: CodeTranslationUnit.cpp CodeTranslationUnit.h \
+ CodeNode.h CodeUsingList.h CodeDeclarationList.h CodeNodeRegister.h \
+ CodeNodeFactory.h SentenceItem.h Position.h Sentence.h CodeDeclaration.h \
+ CodeDeclarationType.h CodeNamespaceDeclaration.h CodeQualifiedName.h \
+ CodeClassDeclaration.h

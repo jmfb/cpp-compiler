@@ -1,0 +1,8 @@
+TransitionTable.o: TransitionTable.cpp TransitionTable.h TransitionList.h \
+ Terminal.h TokenType.h TerminalIdentifierType.h GrammarAction.h \
+ GrammarActionType.h BinaryReader.h BinaryWriter.h SymbolTable.h Token.h \
+ Position.h Scope.h SymbolLink.h TransitionAction.h TransitionType.h \
+ Production.h ProductionItem.h ConflictResolver.h ConflictResolution.h \
+ TokenStream.h PreProcessor.h PreProcessorBlockEvaluator.h \
+ PreProcessorToken.h PreProcessorTokenType.h PreProcessorBlock.h \
+ SentenceItem.h CodeNode.h SentenceToken.h Sentence.h CodeNodeFactory.h

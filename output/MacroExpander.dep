@@ -1,0 +1,3 @@
+MacroExpander.o: MacroExpander.cpp MacroExpander.h Macro.h Position.h \
+ PreProcessorToken.h PreProcessorTokenType.h MacroTableExpander.h \
+ MacroType.h

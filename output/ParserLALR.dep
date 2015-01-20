@@ -1,0 +1,10 @@
+ParserLALR.o: ParserLALR.cpp ParserLALR.h TransitionTable.h \
+ TransitionList.h Terminal.h TokenType.h TerminalIdentifierType.h \
+ GrammarAction.h GrammarActionType.h BinaryReader.h BinaryWriter.h \
+ SymbolTable.h Token.h Position.h Scope.h SymbolLink.h TransitionAction.h \
+ TransitionType.h Production.h ProductionItem.h ConflictResolver.h \
+ ConflictResolution.h TokenStream.h PreProcessor.h \
+ PreProcessorBlockEvaluator.h PreProcessorToken.h PreProcessorTokenType.h \
+ PreProcessorBlock.h SentenceItem.h CodeNode.h Grammar.h NonTerminal.h \
+ SetOfItemSetKernel.h ItemSetX.h ItemX.h ItemXPropogate.h ItemSet1.h \
+ Item1.h

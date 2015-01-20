@@ -1,0 +1,2 @@
+CharStreamCpp.o: CharStreamCpp.cpp CharStreamCpp.h CharStream.h Char.h \
+ Position.h

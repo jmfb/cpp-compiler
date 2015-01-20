@@ -1,0 +1,1 @@
+Char.o: Char.cpp Char.h Position.h

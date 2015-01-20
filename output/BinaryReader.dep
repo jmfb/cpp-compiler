@@ -1,0 +1,1 @@
+BinaryReader.o: BinaryReader.cpp BinaryReader.h
